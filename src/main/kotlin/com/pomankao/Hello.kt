@@ -2,7 +2,7 @@ package com.pomankao
 
 fun main(args: Array<String>) {
 //    println("Hello Kotlin")
-    val human = Human()
+    val human = Human("Poman",80.5f,1.8f)
     human.hello()
 
 //    var s = "abcde"
@@ -15,7 +15,12 @@ fun main(args: Array<String>) {
 }
 
 
-class Human {
+class Human(var name: String, var weight: Float, var height: Float) {
+
+    fun bmi(): Float {
+        return weight/(height*height)
+    }
+
     fun hello() {
         println("Hello kotlin")
     }

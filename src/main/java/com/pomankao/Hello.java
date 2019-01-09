@@ -9,7 +9,7 @@ public class Hello {
         String s = null;
         System.out.println(s.charAt(3));
         System.out.println(s.length());
-        Person person = new Person();
+       Person person = new Person(66.5f, 1.7f);
         person.hello();
 
         int score = 88;
