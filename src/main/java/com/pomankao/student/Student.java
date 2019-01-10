@@ -13,7 +13,7 @@ public class Student {
         this.math = math;
     }
 
-    public int highest() {
+    protected int highest() {
 //        int max = english > math ? english : math;
 //        if (english > math) {
 //            max = english;
@@ -66,5 +66,9 @@ public class Student {
 
     public int getAverage() {
         return (english+math)/2;
+    }
+
+    void testDefaultAccessModifier() {
+        System.out.println("This is test default access modifier.");
     }
 }

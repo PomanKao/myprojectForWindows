@@ -1,5 +1,7 @@
 package com.pomankao
 
+import com.kotlin.Student
+
 fun main(args: Array<String>) {
 //    println("Hello Kotlin")
     val human = Human("Poman",80.5f,1.8f)
@@ -12,6 +14,10 @@ fun main(args: Array<String>) {
     println(s!!.length)
     println(s?.get(3))
     println(s?.substring(3))
+
+    // test internal access modifier
+    val stu = Student("Poman",50,30)
+    stu.grading() // Can access
 }
 
 
