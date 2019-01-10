@@ -5,9 +5,15 @@ import java.util.Scanner;
 public class SchoolRunner {
 
     public static void main(String[] args) {
+//        com.kotlin.Student.getPass()
 //        userInput();
+        Student.pass = 50;
         Student stu = new Student("Poman", 88, 77);
+        Student stu2 = new Student("Tom", 60, 40);
+        Student stu3 = new Student("Jane", 30, 55);
         stu.print();
+        stu2.print();
+        stu3.print();
         System.out.println("\tHigh score: " + stu.highest());
     }
 
