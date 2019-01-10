@@ -1,11 +1,38 @@
 package com.pomankao.many;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class Tester {
     public static void main(String[] args) {
+        HashMap<String, String> stocks = new HashMap<>();
+        stocks.put("2330", "台積電");
+        stocks.put("2317", "鴻海");
+        stocks.put("2330", "TSMC");
+        System.out.println(stocks.get("2330"));;
+        System.out.println(stocks);
+        for (String key : stocks.keySet()) {
+            System.out.println(stocks.get(key));
+        }
+//        setTest();
+//        listTest();
+//        arrayTest();
+    }
+
+    private static void setTest() {
+        // Set
+        HashSet<Integer> set = new HashSet<Integer>();
+        set.add(6);
+        set.add(7);
+        set.add(1);
+        set.add(8);
+        set.add(7);
+        System.out.println(set);
+        for (int n : set) {
+            System.out.println(n);
+        }
+    }
+
+    private static void listTest() {
         ArrayList list = new ArrayList();
         list.add(5);
         list.add(3);
@@ -28,8 +55,6 @@ public class Tester {
         for (int score : scores) {
             System.out.println(score);
         }
-
-//        arrayTest();
     }
 
     private static void arrayTest() {
