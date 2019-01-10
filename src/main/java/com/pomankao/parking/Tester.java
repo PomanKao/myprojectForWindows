@@ -2,11 +2,36 @@ package com.pomankao.parking;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 
 public class Tester {
     public static void main(String[] args) {
+        // Java8
+        java8Instant();
+
+//        javaDateAndCalendar();
+    }
+
+    private static void java8Instant() {
+        Instant instant = Instant.now();
+        System.out.println(instant);
+        // Local
+        LocalDateTime localNow = LocalDateTime.now();
+        System.out.println(localNow);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+        System.out.println(formatter.format(localNow));
+        System.out.println(localNow.plus(Duration.ofHours(3)));
+        LocalDateTime other =
+                LocalDateTime.of(2018,11,23,8,0,0);
+        System.out.println(other);
+    }
+
+    private static void javaDateAndCalendar() {
         Date date = new Date();
         System.out.println(date);
         System.out.println(date.getTime());
