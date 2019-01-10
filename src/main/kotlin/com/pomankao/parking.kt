@@ -6,7 +6,7 @@ import java.time.LocalDateTime
 fun main(args: Array<String>) {
     val enter = LocalDateTime.of(2018,12,25,8,0,0)
     val leave = LocalDateTime.of(2018,12,25,10,8,0)
-    var car = Car("AA-0001", enter)
+    val car = Car("AA-0001", enter)
     car.leave = leave
     println(car.duration())
     val hours = Math.ceil(car.duration()/60.0).toLong()
